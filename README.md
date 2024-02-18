@@ -44,3 +44,12 @@ Disclaimer: Source code of Keras-1.0 taken from [Keras-1 repo](https://github.co
 # Tensorflow Lite Runtime for Running model trained on Tensorflow (tested on Pi-Zero only) <br>
 
 **Navigate to the tflite_micro_rpi0 sub-directory for detailed instruction and installation**
+<br>
+
+# Machine Learning using Scikit-learn library on Pi-Zero
+<br>
+Install scikit-learn using pip <br>
+
+```
+pip install scikit-learn==0.22
+```
