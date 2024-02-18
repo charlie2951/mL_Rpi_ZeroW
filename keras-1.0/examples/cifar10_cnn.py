@@ -12,6 +12,8 @@ save it in a different format, load it in Python 3 and repickle it.
 '''
 
 from __future__ import print_function
+import time
+t1=time.time()
 from keras.datasets import cifar10
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
@@ -22,8 +24,8 @@ from keras.utils import np_utils
 
 batch_size = 32
 nb_classes = 10
-nb_epoch = 200
-data_augmentation = True
+nb_epoch = 20 #changes to 20 for pi Zero
+data_augmentation = False #disabled for Pi Zero
 
 # input image dimensions
 img_rows, img_cols = 32, 32
@@ -108,3 +110,5 @@ else:
                         samples_per_epoch=X_train.shape[0],
                         nb_epoch=nb_epoch,
                         validation_data=(X_test, Y_test))
+
+print("Time elapsed: ",time.time()-t1)

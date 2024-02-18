@@ -4,11 +4,11 @@ Gets to 99.25% test accuracy after 12 epochs
 (there is still a lot of margin for parameter tuning).
 16 seconds per epoch on a GRID K520 GPU.
 '''
-
 from __future__ import print_function
+import time
+t1=time.time()
 import numpy as np
 np.random.seed(1337)  # for reproducibility
-
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation, Flatten
@@ -17,7 +17,7 @@ from keras.utils import np_utils
 
 batch_size = 128
 nb_classes = 10
-nb_epoch = 12
+nb_epoch = 5
 
 # input image dimensions
 img_rows, img_cols = 28, 28
@@ -72,3 +72,4 @@ model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=nb_epoch,
 score = model.evaluate(X_test, Y_test, verbose=0)
 print('Test score:', score[0])
 print('Test accuracy:', score[1])
+print("Time elapsed (in sec): ",time.time()-t1)

@@ -6,6 +6,8 @@ Gets to 98.40% test accuracy after 20 epochs
 '''
 
 from __future__ import print_function
+import time
+t1=time.time()
 import numpy as np
 np.random.seed(1337)  # for reproducibility
 
@@ -58,3 +60,4 @@ history = model.fit(X_train, Y_train,
 score = model.evaluate(X_test, Y_test, verbose=0)
 print('Test score:', score[0])
 print('Test accuracy:', score[1])
+print("time elapsed: ",time.time()-t1)
