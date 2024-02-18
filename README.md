@@ -40,3 +40,7 @@ keras.__version__
    *It is always advisable that train the model in PC/in google Colab-> convert it to Tensor flow LITE format (.tflite) and then run classification on Pi-Zero using TFLITE runtime.* 
  <br>  
 Disclaimer: Source code of Keras-1.0 taken from [Keras-1 repo](https://github.com/keras-team/keras/tree/keras-1)
+<br>
+# Tensorflow Lite Runtime for Running model trained on Tensorflow (tested on Pi-Zero only) <br>
+
+**Navigate to the tflite_micro_rpi0 sub-directory for detailed instruction and installation**
